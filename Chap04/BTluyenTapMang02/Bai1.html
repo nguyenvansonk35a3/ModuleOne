@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>arr - bai1</title>
+</head>
+
+<body>
+    <h1>Khởi tạo mảng 2 chiều và in ra các phần tử trong mảng</h1>
+    <hr>
+
+    <p id="display"></p>
+    <script>
+        var a = [
+            [1, 2, 1, 24],
+            [8, 11, 9, 4],
+            [7, 0, 7, 27],
+            [7, 4, 28, 14],
+            [3, 10, 26, 7],
+        ]
+        
+        var sout = "";
+        for (i = 0; i < a.length; i++) {
+            sout += "row " + i + "<br>";
+            for (j = 0; j < a[i].length; j++) {
+                sout += a[i][j] + "<br>";
+            }
+        }
+        document.getElementById("display").innerHTML = sout;
+    </script>
+
+    <hr>
+    <h2>cach 2</h2>
+    <p id="display2"></p>
+    <script>
+        var sout2 = "";
+        for (var i in a) {
+            sout2 += ("row " + i + "<br>");
+            for (var j in a[i]) {
+                sout2 += (" " + a[i][j] + "<br>");
+            }
+        }
+        document.getElementById("display2").innerHTML = sout2;
+    </script>
+</body>
+
+</html>

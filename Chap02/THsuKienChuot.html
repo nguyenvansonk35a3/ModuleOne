@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>su kien chuot</title>
+</head>
+
+<body onload="docReady()">
+    <h1>su kien chuot</h1>
+    <hr>
+
+    <form action="">
+        <img src="img/nobita.png" alt="" id="bong">
+        <p>Click de thay doi hinh anh</p>
+        <input type="button"  value="click me" onclick="moveRight();">
+    </form>
+
+
+    
+    <script>
+        var imgObj = null;
+
+        function init() {
+            imgObj = document.getElementById("bong");
+            imgObj.style.position = "relative";
+            imgObj.style.left = "0px";
+        }
+
+        //tao ham moveRight để thăng khoảng cách trái
+        function moveRight() {
+            imgObj.style.left = parseInt(imgObj.style.left) + 10 + "px";
+        }
+
+        //gọi hàm khi trình duyệt đc tải lần đầu
+        window.onload = init;
+
+    </script>
+
+</body>
+
+</html>

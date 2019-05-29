@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>bai7</title>
+</head>
+
+<body>
+    <!-- giai phương trinh bac hai ax2 + bx + c = 0 -->
+
+    <script>
+        alert("phuong trinh ax2 + bx + c= 0")
+        var a = parseInt(prompt("Nhap a : "));
+        var b = parseInt(prompt("Nhap b : "));
+        var c = parseInt(prompt("Nhap c : "));
+
+        if (a == 0) {
+            alert("phương trình trở thành phương trình bậc nhất! bx  + c = 0");
+            if (b == 0) {
+                if (b == 0) {
+                    alert("phuong trinh vô số nghiệm")
+                } else {
+                    alert("không thể chia cho 0 - phương trình vô nghiệm")
+                }
+            } else {
+                var x = -c / b;
+                alert("phuong trinh co nghiêm x = " + x);
+            }
+        } else {
+            var delta = b * b - 4 * a * c;
+            if (delta > 0) {
+                alert("Phuong trinh co  2 nghiem phan biet: x1 = " + (-b + Math.sqrt(delta)) / (2 * a) + " và x2 = " + (-b - Math.sqrt(delta)) / (2 * a));
+            } else if (delta == 0) {
+                alert("Phuong trinh co nghiệm kép x1 = x2 = " + (-b) / (2 * a));
+            } else {
+                alert("Phuong trinh vô nghiệm");
+            }
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>bai1</title>
+</head>
+
+<body>
+    <h1>in dãy fibonaci (làm rồi mà)</h1>
+    <hr>
+
+    <script>
+        var number = parseInt(prompt("Nhập number"));
+        var x = 0;
+        var y = 1;
+        var count = 2;
+        var sout = " 0 1 ";
+        while (count <= number) {
+            next = x + y;
+            x = y;
+            y = next;
+            sout += " " + next;
+            count++;
+        }
+
+        // nhớ in ra
+        document.write(sout);
+    </script>
+</body>
+
+</html>

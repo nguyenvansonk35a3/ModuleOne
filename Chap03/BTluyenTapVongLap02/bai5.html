@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>bai5</title>
+</head>
+
+<body>
+    <h1>lãi mẹ đẻ lãi con (làm rồi)</h1>
+    <hr>
+
+    <script>
+        var money = parseInt(prompt("Nhap sô tiền ban đầu : "));
+        var thang = parseInt(prompt("Nhap sô tháng : "));
+        var laiSuat = parseFloat(prompt("Nhap lãi suất hàng tháng : "));
+        var lai = 0;
+
+        for (var i = 1; i <= thang; i++) {
+            lai = (lai + money) * laiSuat;
+        }
+        alert("tổng tiền lãi = " + lai);
+    </script>
+</body>
+
+</html>

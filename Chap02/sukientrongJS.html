@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="demo"></div>
+    <button onclick="document.getElementById('demo').innerHTML = Date()">The time is?</button>
+
+    <br>
+    <br>
+    <button onclick="this.innerHTML=Date()">The time is?</button>
+
+    <br>
+    <br>
+    <p>thuong thi chung ta goi den ham javascript</p>
+    <button onclick="myfunction()">click de thay doi</button>
+    <p id="thay">vi tri de thay</p>
+    <script>
+        function myfunction(){
+            document.getElementById("thay").innerHTML = Date();
+        }
+    </script>
+</body>
+
+</html>

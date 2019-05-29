@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>bai5</title>
+</head>
+
+<body>
+    <!-- xEp hang hoc luc dua tren: diem kiem tra, diem giua ki, diem cuoi ki-->
+
+    <script>
+        var kiemTra = parseInt(prompt("nhap điểm kiểm tra: "));
+        var giuaKy = parseInt(prompt("nhap điểm giữa kỳ: "));
+        var cuoiKy = parseInt(prompt("nhap điểm cuối kỳ: "));
+
+        var tb = (kiemTra + giuaKy * 2 + cuoiKy * 3) / 6;
+        if (tb < 5) {
+            alert("Hoc luc kém! ");
+        } else if (tb < 6.5) {
+            alert("hoc luc trung binh");
+        } else if (tb < 8) {
+            alert("hoc luc khá");
+        } else if (tb < 9) {
+            alert("hoc luc giỏi");
+        } else alert("học luc xuat sắc");
+
+    </script>
+</body>
+
+</html>

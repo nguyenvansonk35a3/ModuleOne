@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>bai6</title>
+</head>
+
+<body>
+    <h1>tổng 30 số chia hết cho 7 đầu tiên</h1>
+    <hr>
+
+    <script>
+        var count = 0;
+        var sum = 0;
+        var N = 0;
+        while (count <= 70) {
+            if (N % 7 == 0) {
+                sum += N;
+                count++;
+            }
+            N++;
+        }
+
+        // nhớ in ra
+        document.write("tổng 70 số đầu tiên chia hết cho 7 = " + sum);
+
+    </script>
+</body>
+
+</html>

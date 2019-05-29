@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>bai9</title>
+</head>
+
+<body>
+    <h1>noi cac phan tu trong array A va B vao array C</h1>
+    <hr>
+    Display array A: <p id="hienthiA"></p>
+    Display array B: <p id="hienthiB"></p>
+    <br>
+    Display array C: <p id="hienthiC"></p>
+    <script>
+        var A = [];
+        var B = [];
+        var C = [];
+        for (i = 0; i < 10; i++) {
+            A[i] = parseInt(prompt(" Nhap element array A: "));
+            B[i] = parseInt(prompt(" Nhap element array B: "));
+        }
+        var sout1 = "";
+        var sout2 = "";
+        for (i = 0; i < 10; i++) {
+            sout1 += A[i] + " ";
+            sout2 += B[i] + " ";
+        }
+        document.getElementById("hienthiA").innerHTML = sout1;
+        document.getElementById("hienthiB").innerHTML = sout2;
+
+        //đẩy  A B vào C
+        for (i = 0; i < 10; i++) {
+            C.push(A[i]);
+            C.push(B[i]);
+        }
+
+        var sout3 = "";
+        for (i = 0; i < C.length; i++) {
+            sout3 += C[i] + " ";
+        }
+        document.getElementById("hienthiC").innerHTML = sout3;
+
+    </script>
+</body>
+
+</html>

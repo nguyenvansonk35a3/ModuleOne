@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>taoVaGoiHam</title>
+    <script>
+        function process(answer) {
+            var result = "";
+            if (answer) {
+                result = "OK ";
+            } else {
+                result = "NO";
+            }
+            return result;
+        }
+    </script>
+</head>
+
+<body>
+    <h1>đưa thông tin đầu vào và đưa ra quyết định dựa vào thông tin đó</h1>
+    <hr>
+
+    <script>
+        var info = confirm("hien thi trong hop thoai");
+        var theAnser = process(info);
+        document.write(theAnser);
+    </script>
+
+</body>
+
+</html>

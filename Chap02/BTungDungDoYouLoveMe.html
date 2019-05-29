@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bai tap ung dung DoYouLoveME</title>
+
+</head>
+
+<body>
+    <h1>Do you love me?</h1>
+    <button onclick="clickYES()">YES</button>
+    <button onmouseover="noHover()" id="btnNo" style="position: absolute;">NO</button>
+
+    <script>
+        function clickYES() {
+            alert("YES - I LOVE YOU");
+        }
+        function noHover() {
+            var x = Math.round(Math.random() * window.innerWidth);
+            var y = Math.round(Math.random() * window.innerHeight);
+
+            document.getElementById("btnNo").style.left = x +"px";
+            document.getElementById("btnNo").style.top = y +"px";
+        }
+    </script>
+</body>
+
+</html>

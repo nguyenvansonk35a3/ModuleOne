@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>su kien ban phim</title>
+</head>
+
+<body onload="docReady()">
+    <h1>su kien ban phim</h1>
+    <hr>
+
+    <img src="img/nobita.png" alt="" id="nobita"
+        style="position: absolute; top: 100px; left:100px; height: 400px; width: 260px;">
+    <script>
+        function upA() {
+            var element = document.getElementById("nobita");
+            element.style.top = parseInt(element.style.top) - 5 + "px";
+        }
+        function downA() {
+            var element = document.getElementById("nobita");
+            element.style.top = parseInt(element.style.top) + 5 + "px";
+        }
+        function leftA() {
+            var element = document.getElementById("nobita");
+            element.style.left = parseInt(element.style.left) - 5 + "px";
+        }
+        function rightA() {
+            var element = document.getElementById("nobita");
+            element.style.left = parseInt(element.style.left) + 5 + "px";
+        }
+
+        //hàm nhận các phím
+        function moveSelection(evt) {
+            switch (evt.keyCode) {
+                case 37:
+                    leftA();
+                    break;
+                case 39:
+                    rightA();
+                    break;
+                case 38:
+                    upA();
+                    break;
+                case 40:
+                    downA();
+                    break;
+            }
+        }
+
+        //goi ham khi trinh duyet dc tai lan dau
+        function docReady(){
+            window.addEventListener("keydown", moveSelection);
+        }
+
+
+
+    </script>
+</body>
+
+</html>

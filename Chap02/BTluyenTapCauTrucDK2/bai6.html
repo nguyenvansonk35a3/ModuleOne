@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>bai6</title>
+</head>
+
+<body>
+    <!-- giai phương trinh bac nhat ax + b = 0 -->
+
+    <script>
+        alert("phuong trinh ax + b = 0")
+        var a = parseInt(prompt("Nhap a : "));
+        var b = parseInt(prompt("Nhap b : "));
+        if (a == 0) {
+            if (b == 0) {
+                alert("phuong trinh vô số nghiệm")
+            } else {
+                alert("không thể chia cho 0 - phương trình vô nghiệm")
+            }
+        } else {
+            var x = -b / a;
+            alert("phuong trinh co nghiêm x = " + x);
+        }
+       
+    </script>
+</body>
+
+</html>

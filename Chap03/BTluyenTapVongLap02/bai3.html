@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>bai3</title>
+</head>
+
+<body>
+    <h1>in tam giác vuông</h1>
+    <hr>
+
+    <script>
+        var canh = parseInt(prompt("nhập số cạnh: "));
+        var sout = "";
+
+        for (var i = 0; i < canh; i++) {
+            sout += "*";
+            document.write(sout);
+            document.write("<br>");
+        }
+
+        document.write("<hr>");
+
+        for (var i = canh; i > 0; i--) {
+            document.write(sout);
+            sout -= "*";
+            document.write("<br>");
+        }
+    </script>
+</body>
+
+</html>

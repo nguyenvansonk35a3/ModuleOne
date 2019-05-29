@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>arr - bai3</title>
+</head>
+
+<body>
+    <h1>đếm số kí tự số trong mảng</h1>
+    <hr>
+
+    <p id="displayArr"></p>
+
+    <script>
+        var arr = ['1', '2', 'g', 'p', '9'];
+
+        // display array
+        var sout = "";
+        for (i = 0; i < arr.length; i++) {
+            sout += arr[i] + " ";
+        }
+        document.getElementById("displayArr").innerHTML = sout;
+
+        var count = 0;
+        for (i = 0; i < arr.length; i++) {
+            if (parseInt(arr[i]) % 1 == 0) {
+                count++;
+            }
+        }
+        document.write("Mảng trên có " + count + " kí tự số")
+    </script>
+
+</body>
+
+</html>

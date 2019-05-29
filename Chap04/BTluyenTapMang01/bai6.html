@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>bai6</title>
+</head>
+
+<body>
+    <h1>nhập mảng, nhập giá trị V xem V có tồn tại trong mảng hay không</h1>
+    <hr>
+    <p id="hienthi"></p>
+    <p id="kiemTra"></p>
+    <script>
+        var arr = [];
+        for (i = 0; i < 10; i++) {
+            arr[i] = parseInt(prompt("nhap element: "));
+        }
+        var sout = "";
+        for (i = 0; i < arr.length; i++) {
+            sout += arr[i] + " ";
+        }
+        document.getElementById("hienthi").innerHTML = sout;
+
+        //nhập giá trị V và kiểm tra
+        var V = parseInt(prompt("add value V: "));
+        var sout2 = "";
+        for (i = 0; i < arr.length; i++) {
+            if (V == arr[i]) {
+                sout2 += V + " is in the array";
+            }
+        }
+        document.getElementById("kiemTra").innerHTML = sout2;
+
+    </script>
+</body>
+
+</html>

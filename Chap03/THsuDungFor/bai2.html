@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>bai2</title>
+</head>
+
+<body>
+    <h1>Hiển thị từ 1 đến number</h1>
+    <hr>
+    <p id="hienthi"></p>
+    <script>
+
+        var number = parseInt(prompt("Your number: "));
+        var sum = 0;
+        for (var i = 1; i <= number; i++) {
+            sum += i;
+        }
+
+        document.getElementById("hienthi").innerHTML = "Tổng từ 1 đến " + number + " là: " + sum;
+    </script>
+</body>
+
+</html>

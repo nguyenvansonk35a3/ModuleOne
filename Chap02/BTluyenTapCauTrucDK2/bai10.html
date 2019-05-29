@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>bai10</title>
+</head>
+
+<body>
+    <!--chuong trình tính tiền điện -->
+
+    <script>
+        var kwh = parseInt(prompt("Nhap số điện kwh : "));
+        var giaDien1 = 1.5;
+        var giaDien2 = 1.6;
+        var giaDien3 = 1.8;
+        var giaDien4 = 2.3;
+
+        var tien = 0;
+
+        if (kwh >= 0) {
+            if (kwh <= 50) {
+                tien = kwh * giaDien1;
+            } else if (kwh <= 175) {
+                tien = 50 * giaDien1 + (kwh - 50) * giaDien2;
+            } else if (kwh <= 425) {
+                tien = 50 * giaDien1 + 125 * giaDien2 + (kwh - 175) * giaDien3;
+            } else {
+                tien = 50 * giaDien1 + 125 * giaDien2 + 250 * giaDien3 + 250 * giaDien3 + (kwh - 425) * giaDien4;
+            }
+        } else {
+            alert("Nhap lai số điện!")
+        }
+        alert("số tiền phải trả : " + tien + " ngàn đồng");
+    </script>
+</body>
+
+</html>

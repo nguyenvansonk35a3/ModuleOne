@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>bai tap mang</title>
+</head>
+
+<body>
+    <h1>tìm phần tử trong mảng , xóa nó đi và đưa nó lên đầu</h1>
+    <hr>
+    <p id="hienthi"></p>
+    <br>
+    <p id="result"></p>
+    <script>
+        var arr = ['son', 'nam', 'hai', 'linh', 'huong', 'nam'];
+        var sout = "";
+        for (i = 0; i < arr.length; i++) {
+            sout += arr[i] + " ";
+        }
+        document.getElementById("hienthi").innerHTML = "Mang truoc: " + sout;
+
+        var sout2 = "";
+        var addVariable = prompt("add variable ... find: ");
+        var index = 0;
+        for (i = 0; i < arr.length; i++) {
+            if (arr[i] == addVariable) {
+                index = i;
+                for (j = index; j < arr.length; j++) {
+                    index++;
+                    arr[j] = arr[index];
+                }
+                break;
+            }
+        }
+        arr.pop();
+        arr.unshift(addVariable);
+
+        //hien thi mang sau khi xoa va them
+        for (i = 0; i < arr.length; i++) {
+            sout2 += arr[i] + " ";
+        }
+        document.getElementById("result").innerHTML = "Mang sau: " + sout2;
+
+    </script>
+</body>
+
+</html>

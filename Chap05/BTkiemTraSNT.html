@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>kiemtraSNT</title>
+</head>
+
+<body>
+    <h1>Kiểm tra số nguyên tố</h1>
+    <hr>
+
+    <script>
+        function isPrime(number) {
+            var sout = "";
+            for (i = 1; i <= number; i++) {
+                var dem = 0;
+                for (j = 1; j <= i; j++) {
+                    if (i % j == 0) {
+                        dem++;
+                    }
+                }
+                if (dem == 2) {
+                    sout += i + " ";
+                }
+            }
+
+            return sout;
+        }
+
+        var display = isPrime(1000);
+        document.write(" CÁC SỐ NGUYÊN TỐ <1000 LÀ:  " + display);
+    </script>
+</body>
+
+</html>

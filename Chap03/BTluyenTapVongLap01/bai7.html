@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>bai7</title>
+</head>
+
+<body>
+    <h1>in ra tu 1 den 100 (Tru %3 va %5) </h1>
+    <hr>
+
+    <script>
+        var sout = "";
+        for (var i = 1; i <= 100; i++) {
+            if (i % 3 == 0) {
+                sout += " " + "Fizz";
+            } else if (i % 5 == 5) {
+                sout += " " + "Buzz"
+            } else if (i % 15 == 0) {
+                sout += " " + "FizzBuzz";
+            } else {
+                sout += " " + i;
+            }
+        }
+        // làm xong nhớ in ra
+        document.write(sout);
+    </script>
+</body>
+
+</html>

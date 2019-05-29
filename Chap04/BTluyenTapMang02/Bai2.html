@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>arr - bai2</title>
+</head>
+
+<body>
+    <h1>in cac kí tự trong arr theo thứ tự đảo ngược</h1>
+    <hr>
+
+    <p id="display"></p>
+    <p>sau khi dao ngươc: </p>
+    <p id="display2"></p>
+    <script>
+        var arr = [];
+        //add array and show array
+        var n = prompt("add array n element!");
+        var sout = "";
+        for (i = 0; i < n; i++) {
+            arr[i] = prompt("arr[" + i + "] = ");
+            sout += arr[i];
+        }
+        document.getElementById("display").innerHTML = sout;
+
+        //dao ngươc
+        arr.reverse();
+        var sout2 = "";
+        for (i = 0; i < arr.length; i++) {
+            sout2 += arr[i];
+        }
+        document.getElementById("display2").innerHTML = sout2;
+    </script>
+
+</body>
+
+</html>

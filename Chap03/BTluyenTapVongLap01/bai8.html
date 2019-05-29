@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>bai8</title>
+</head>
+
+<body>
+    <h1>Game: hãy đoán xem</h1>
+    <hr>
+    <input type="button" value="Chơi" onclick="choi()">
+    <script>
+        function choi() {
+            var dau = parseInt(prompt(" dau: "));
+            var cuoi = parseInt(prompt(" cuoi: "));
+
+            var computer = Math.floor(Math.random() * cuoi) + dau;    //return a random integer from  dau to cuoi
+
+            var user = parseInt(prompt(" Mình đoán: "));
+
+            if (computer == user) {
+                alert("chúc mừng bạn đoán đúng");
+            } else if (computer < user) {
+                alert("số vừa nhập lớn hơn random");
+            } else {
+                alert("số vừa nhập nhỏ hơn random");
+            }
+        }
+    </script>
+</body>
+
+</html>

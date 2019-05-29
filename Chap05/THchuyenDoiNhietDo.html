@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>thuchanh</title>
+</head>
+
+<body>
+    <h1>thực hành chuyển đổi độ F sang C</h1>
+    <hr>
+
+    Độ F: <input type="text" id="input" oninput="result()"> Độ C: <span id="output"></span>
+
+</body>
+
+<script>
+    function result() {
+        var doF = document.getElementById("input").value;
+        var doC = chuyenDoi(doF);
+        document.getElementById("output").innerHTML = doC;
+    }
+
+    function chuyenDoi(x) {
+        var y = (x - 32) / 1.8;
+        return y;
+    }
+</script>
+
+</html>

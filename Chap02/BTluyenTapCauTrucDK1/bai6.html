@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>bai6</title>
+</head>
+
+<body>
+    <!-- Tính hoa hồng dựa vào doanh số bán hàng-->
+
+    <script>
+        var doanhSo = parseInt(prompt("nhap doanh so:  "));
+        var hoaHong = 0;
+        if (doanhSo > 30000000) {
+            hoaHong = 2000000;
+        } else if (doanhSo > 20000000) {
+            hoaHong = 1500000;
+        } else if (doanhSo > 10000000) {
+            hoaHong = 1000000;
+        } else hoaHong = 0;
+
+        alert("Hoa hồng = " + hoaHong);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>bai4</title>
+</head>
+
+<body>
+    <!-- Nhập 3 so nguyen va tim gia tri lon nhat-->
+
+    <script>
+        var a = parseInt(prompt("nhap a: "));
+        var b = parseInt(prompt("nhap b: "));
+        var c = parseInt(prompt("nhap c: "));
+        if (a < b) {
+            if (b < c) {
+                alert("Max = " + c);
+            } else {
+                alert("Max = " + b);
+            }
+        } else if (b > c) {
+            alert("Max = " + a);
+        } else if (a < c) {
+            alert("Max = " + c)
+        } else {
+            alert("max = " + a);
+        }
+
+    </script>
+</body>
+
+</html>

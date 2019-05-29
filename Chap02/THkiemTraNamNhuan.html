@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>keim tra nam nhuan</title>
+</head>
+
+<body>
+    <script>
+        var year = parseInt(prompt("nhap year: "));
+
+
+        var boolean = true;
+
+        var isBy4 = year % 4 == 0;
+        if (isBy4) {
+            var isBy100 = year % 100 == 0;
+            if (isBy100) {
+                var isBy400 = year % 400 == 0;
+                if (isBy400) {
+                    boolean = true;
+                } else {
+                    boolean = false;
+                }
+            } else {
+                boolean = true;
+            }
+        } else {
+            boolean = false;
+        }
+
+        if (boolean) {
+            alert("nhuan");
+        } else {
+            alert("khong");
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>thuc hanh mang</title>
+</head>
+
+<body>
+    <center>
+        <h1>Thêm phần tử vào mảng và hiển thị chúng</h1>
+        <hr>
+        <h2>Sample Screem</h2>
+        <input type="text" id="txtValue" />
+        <input type="button" name="" id="btnAdd" value="Add" onclick="add_element_to_array()">
+        <input type="button" name="" id="btnDisplay" value="Display" onclick="display_array()">
+        <hr>
+        <p id="result"></p>
+        <script>
+            var arr = Array();
+            var x = 0;      //khởi tạo chỉ số cho array
+
+            function add_element_to_array() {
+                arr[x] = document.getElementById("txtValue").value;
+                alert("Element: " + arr[x] + " Added at index " + x);
+                x++;
+                document.getElementById("txtValue").value = "";
+            }
+
+            function display_array() {
+                var sout = "";
+                for (var i = 0; i < arr.length; i++) {
+                    sout += "Element: " + i + " = " + arr[i] + "<br/>";
+                    document.getElementById("result").innerHTML = sout;
+                }
+            }
+
+        </script>
+    </center>
+</body>
+
+</html>

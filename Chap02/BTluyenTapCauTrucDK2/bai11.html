@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>bai11</title>
+</head>
+
+<body>
+    <!--chuong trình tính thuế thu nhập cá nhân -->
+
+    <script>
+        var money = parseInt(prompt("Nhap sô thu nhập : "));
+        var thueSuat1 = 0.05;
+        var thueSuat2 = 0.1;
+        var thueSuat3 = 0.15;
+        var thueSuat4 = 0.2;
+
+        var thue = 0;
+
+        if (money >= 0) {
+            if (money <= 5E6) {
+                thue = money * thueSuat1;
+            } else if (money <= 10E6) {
+                thue = 5E6 * thueSuat1 + (money - 5E6) * thueSuat2;
+            } else if (money <= 18E6) {
+                thue = 5E6 * thueSuat1 + 5E6 * thueSuat2 + (money - 10E6) * thueSuat3;
+            } else {
+                thue = 5E6 * thueSuat1 + 5E6 * thueSuat2 + 8E6 * thueSuat3 + (money - 18E6) * thueSuat4;
+            }
+        } else {
+            alert("Nhap lai thu nhập!")
+        }
+        alert("Thu nhâp : " + money + " thì có thuế = " + thue);
+
+
+       
+</body>
+
+</html>

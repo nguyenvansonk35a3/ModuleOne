@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>bai1</title>
+</head>
+
+<body>
+    <h1>nhập vào 1 số, dừng lại khi nhập vào -1</h1>
+    <hr>
+    <p id="hienthi"></p>
+    <p > Tổng các số vừa nhập là <span id="tong"></span></p>
+    <script>
+        var number = 0;
+        var sum = 0;
+        var text = "";
+        while (number != -1) {
+            number = parseInt(prompt("Nhập number: "));
+            text += " number is " + number + "<br>";
+            sum += number;
+        }
+        document.getElementById("hienthi").innerHTML = text;
+
+        document.getElementById("tong").innerHTML = sum;
+    </script>
+</body>
+
+</html>

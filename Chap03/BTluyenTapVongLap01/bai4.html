@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>bai4</title>
+</head>
+
+<body>
+    <h1>tim so dau tien trong day fibonaci chia het cho 5</h1>
+    <hr>
+
+    <script>
+        var x = 0;
+        var y = 1;
+        var sout = " 0 1 ";
+        do {
+            next = x + y;
+            x = y;
+            y = next;
+
+        } while (next % 5 != 0);
+
+        // nhớ in ra
+        document.write("số chia hết cho 5 là: " + next);
+    </script>
+</body>
+
+</html>

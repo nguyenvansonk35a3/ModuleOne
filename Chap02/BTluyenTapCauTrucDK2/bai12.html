@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>bai12</title>
+</head>
+
+<body>
+    <!--chuong trình tính lãi suất (lãi mẹ đẻ lãi con) -->
+    <!-- sau 1 hồi suy nghĩ mình đã tìm ra công thức : l = (l + t)*0.18 -->
+    <script>
+        var money = parseInt(prompt("Nhap sô tiền ban đầu : "));
+        var thang = parseInt(prompt("Nhap sô tháng : "));
+        var laiSuat = parseFloat(prompt("Nhap lãi suất hàng tháng : "));
+        var lai = 0;
+
+        for (var i = 1; i <= thang; i++) {
+            lai = (lai + money) * laiSuat;
+        }
+        alert("tổng tiền lãi = " + lai);
+    </script>
+</body>
+
+</html>

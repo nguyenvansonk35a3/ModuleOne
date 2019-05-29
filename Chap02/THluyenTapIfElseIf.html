@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>luyen tap if else</title>
+</head>
+
+<body>
+
+    <script>
+        var username = prompt("Nhap username tu ban phim: ");
+
+        if (username == "Admin") {
+            var pass = prompt("Nhap mat khau: ");
+            if (pass == "TheMaste") {
+                alert("welcome");
+            } else if (pass == "null") {
+                alert("Canceled");
+            } else {
+                alert("Wrong password");
+            }
+        } else if (username == "null") {
+            alert("canceld");
+        } else {
+            alert("i don't know you!");
+        }
+
+    </script>
+</body>
+
+</html>

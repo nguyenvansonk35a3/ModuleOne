@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>bai4</title>
+</head>
+
+<body>
+    <h1>khởi tạo nhập mảng số nguyên và đảo ngược các phần tử trong mảng</h1>
+    <hr>
+    <p id="hienthi"></p>
+    <p id="mangDaoNguoc"></p>
+    <script>
+        var arr = [];
+        for (i = 0; i < 5; i++) {
+            arr[i] = parseInt(prompt("nhap element: "));
+        }
+
+        var sout = "";
+        for (i = 0; i < arr.length; i++) {
+            sout += arr[i] + " ";
+        }
+        document.getElementById("hienthi").innerHTML = sout;
+
+        //đảo ngược mảng
+
+        var sout2;
+        document.getElementById("mangDaoNguoc").innerHTML = "Mảng sau khi đảo ngược là:  " + arr.reverse();
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>bai5</title>
+</head>
+
+<body>
+    <h1>đếm số nguyên âm trong 1 mảng</h1>
+    <hr>
+    <p id="hienthi"></p>
+    <p id="demSoAm"></p>
+    <script>
+        var arr = [-1, 5, 6, -1, 12, -5, 13, 47, 15, 66];
+        var sout = "";
+        for (i = 0; i < arr.length; i++) {
+            sout += arr[i] + " ";
+        }
+        document.getElementById("hienthi").innerHTML = sout;
+
+        //đếm số âm
+        var count = 0;
+        var sout2 = "";
+        for (i = 0; i < arr.length; i++) {
+            if (arr[i] < 0) {
+                count++;
+                sout2 += arr[i] + " ";
+            }
+        }
+        document.getElementById("demSoAm").innerHTML = "mảng trên có " + count + " phẩn tử số âm là: " + sout2;
+
+        
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>bai tap sinh bang cuu chuong</title>
+</head>
+
+<body>
+    <h1>Bài tập sinh bảng cửu chương</h1>
+    <hr>
+    <script>
+        var sout, i, j;
+        sout = "<table border='1' width='1280' height='400' cellspacing='2' cellpadding='15' color:'red'> ";
+
+        for (i = 1; i <= 10; i++) {
+            sout = sout + "<tr>";
+            for (j = 1; j <= 10; j++) {
+                sout = sout + "<td>" + j + " * " + i + " = " + i * j + "</td>";
+            }
+            sout = sout + "</tr>";
+        }
+        sout += "</table>";
+
+        //thiếu mất lệnh write
+        document.write(sout);
+    </script>
+</body>
+
+</html>

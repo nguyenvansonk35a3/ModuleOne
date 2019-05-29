@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>bai5</title>
+</head>
+
+<body>
+    <h1>tổng 20 số đầu tiên trong dãy fibonaci</h1>
+    <hr>
+
+    <script>
+        var x = 0;
+        var y = 1;
+        var count = 2;
+        var sout = " 0 1 ";
+
+        //add bien sum
+        var sum = x + y;
+        while (count <= 20) {
+            next = x + y;
+            x = y;
+            y = next;
+            sout += " " + next;
+            sum += next;
+            count++;
+        }
+
+        // nhớ in ra
+        document.write(sout);
+        document.write("<br>");
+        document.write("tổng = " + sum);
+
+    </script>
+</body>
+
+</html>

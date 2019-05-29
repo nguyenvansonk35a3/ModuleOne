@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ban co caro</title>
+</head>
+
+<body>
+    <h1>Thực hành tạo bàn cờ caro đơn giản</h1>
+    <hr>
+    <p id="hienthi"></p>
+    <input type="button" name="" id="btnChange" value="ChangeValue" onclick="myfunction()">
+    <br>
+    <script>
+        // hiển thị bàn cờ
+        var b = document.getElementById("hienthi");
+        var arr = [];
+        var sout = "";
+
+        for (var i = 0; i < 5; i++) {
+            arr[i] = new Array(0, 0, 0, 0, 0);
+        }
+
+        for (var i = 0; i < 5; i++) {
+            sout += "<br>";
+            for (var j = 0; j < 5; j++) {
+                sout += arr[i][j] + " ";
+            }
+        }
+
+        sout += "<br><br><input type = 'button' value='Change Value' onclick='myfunction()'>";
+        b.innerHTML = sout;
+
+        function myfunction() {
+            var positionX = prompt("X: ");
+            var positionY = prompt("Y: ");
+            sout = " ";
+            arr[positionX][positionY] = "x";
+            for (var i = 0; i < 5; i++) {
+                sout += "<br/>";
+                for (var j = 0; j < 5; j++) {
+                    sout += arr[i][j] + " ";
+                }
+            }
+            sout += "<br/><br/><input type='button' value='Change Value' onclick='myfunction()'>"
+            b.innerHTML = "<hr/>" + sout;
+        }
+    </script>
+
+</body>
+
+</html>

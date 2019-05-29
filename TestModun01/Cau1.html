@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>cau1</title>
+</head>
+
+<body>
+    <h1>Tim vi tri xuat hien dau tien trong mảng</h1>
+    <hr>
+    <script>
+        var arrStudent = ["Nam", "Minh", "Long", "Thắng", "Khánh", "Trang", "Thảo", "Nam", "Phát", "Nhật"];
+        var parameter = "Minh";
+        var sout = "Vị trí xuất hiện đầu tiên của " + parameter + " là : " + findFirstOfStudent(arrStudent, parameter);
+        document.write(sout);
+
+        function findFirstOfStudent(arr, name) {
+            var index = -1;
+            for (i = 0; i < arr.length; i++) {
+                if (arr[i] == name) {
+                    index = i;
+                    return index;
+                }
+            }
+            return index;
+        }
+    </script>
+</body>
+
+</html>

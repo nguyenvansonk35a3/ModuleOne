@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cau2</title>
+</head>
+
+<body>
+    <h1>Nhận vào 1 mảng số nguyên và 1 số nguyên, trả về mảng ban đầu đã được loại bỏ phần tử đầu tiên có giá trị là
+        nunmber truyền vào</h1>
+    <hr>
+
+    <script>
+        var arrInt = [1, 2, 3, 6, 5, 4, 7, 8, 9, 1, 2, 3];
+        var parameter = 1;
+        var sout = "Return array: " + tryRemoveNumberFromArray(arrInt, parameter);
+        document.write(sout);
+
+        function tryRemoveNumberFromArray(arr, number) {
+            for (i = 0; i < arr.length; i++) {
+                if (arr[i] == number) {
+                    arr.splice(i, 1);
+                    return arr;
+                }
+            }
+            return arr;
+        }
+    </script>
+
+</body>
+
+</html>
