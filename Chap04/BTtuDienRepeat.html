@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>tudien - cach 2</title>
+</head>
+
+<body>
+    <center>
+        <h1>tu dien cach 2</h1>
+        <hr>
+
+        <input type="text" id="tiengAnh">
+        <input type="button" value="Dich" onclick="dich()">
+        <input type="text" id="tiengViet">
+    </center>
+
+
+    <script>
+        var arrAnh = ["banana", "orange", "apple"];
+        var arrViet = ["qua chuoi", "Cam", "tao"];
+
+        function dich() {
+            var last;
+            var first = document.getElementById("tiengAnh").value;
+            for (var i = 0; i < arrAnh.length; i++) {
+                if (arrAnh[i] === first) {
+                    document.getElementById("tiengViet").value = arrViet[i];
+                }
+            }
+            // first.innerHTML = "";
+        }
+    </script>
+</body>
+
+</html>
