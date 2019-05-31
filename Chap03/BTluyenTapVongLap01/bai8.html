@@ -9,15 +9,18 @@
 </head>
 
 <body>
-    <h1>Game: hãy đoán xem</h1>
-    <hr>
-    <input type="button" value="Chơi" onclick="choi()">
+    <center>
+        <h1>Game: hãy đoán xem</h1>
+        <hr>
+        <input type="button" value="Chơi" onclick="choi()">
+    </center>
+
     <script>
         function choi() {
             var dau = parseInt(prompt(" dau: "));
             var cuoi = parseInt(prompt(" cuoi: "));
 
-            var computer = Math.floor(Math.random() * cuoi) + dau;    //return a random integer from  dau to cuoi
+            var computer = Math.floor(Math.random() * cuoi) + dau; //return a random integer from  dau to cuoi
 
             var user = parseInt(prompt(" Mình đoán: "));
 
@@ -30,6 +33,7 @@
             }
         }
     </script>
+
 </body>
 
 </html>

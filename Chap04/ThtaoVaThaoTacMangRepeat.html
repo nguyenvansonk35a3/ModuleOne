@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>add array and display</title>
+
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+
+        <center>
+            <h1>Thuc hanh thao tac mang</h1>
+            <hr>
+
+            <h2>Sample Screen</h2>
+            <form class="form-inline" >
+                <div class="form-group">
+                    <input type="text" name="" id="txtInput"               class="form-control" class="cl-">
+                    <input type="button" value="Add" onclick="addArray()"           class="btn btn-danger">
+                    <input type="button" value="Display" onclick="displayArray()"   class="btn btn-primary" >
+                </div>
+            </form>
+
+            <hr>
+            <p id="show"></p>
+
+        </center>
+
+        <script>
+            var arrays = Array();
+            var x = 0;
+
+            function addArray() {
+                arrays[x] = document.getElementById("txtInput").value;
+                alert("Element: " + x + " is " + arrays[x]);
+                x++;
+
+                document.getElementById("txtInput").value = ""; //refresh input ve null
+            }
+
+            function displayArray() {
+                var sout = "";
+                for (var i = 0; i < arrays.length; i++) {
+                    sout += "Element " + i + " : " + arrays[i] + "<br>";
+                }
+
+                document.getElementById("show").innerHTML = sout;
+            }
+        </script>
+    </div>
+
+</body>
+
+</html>

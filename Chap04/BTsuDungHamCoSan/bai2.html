@@ -14,7 +14,18 @@
     <p id="hienthi"></p>
     <script>
         var number = parseInt(prompt("nhap number: "));
-        document.getElementById("hienthi").innerHTML = arr.toString();
+        number = number.toString();
+        document.write(number);
+
+        var result = number[0];
+        for(var i = 1; i<number.length();i++){
+            if ((number[i -1]%2 === 0)&&(number[i]%2 ===0)) {
+                result.push("-",number[i]);
+            } else{
+                result.push(number[i]);
+            }
+        }
+        document.getElementById("hienthi").innerHTML = number.toString();
     </script>
 </body>
 

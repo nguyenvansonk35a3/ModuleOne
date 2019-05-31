@@ -11,42 +11,56 @@
 <body>
     <h1>Thực hành tạo bàn cờ caro đơn giản</h1>
     <hr>
-    <p id="hienthi"></p>
-    <input type="button" name="" id="btnChange" value="ChangeValue" onclick="myfunction()">
-    <br>
+
+    <p id="caroGame"></p>
+    <input type="button" value="Change Value" onclick="changeValue()">
+
     <script>
-        // hiển thị bàn cờ
-        var b = document.getElementById("hienthi");
-        var arr = [];
+        //display ban co
         var sout = "";
+        var board = [];
 
-        for (var i = 0; i < 5; i++) {
-            arr[i] = new Array(0, 0, 0, 0, 0);
-        }
+        var arrays = [
+            [0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0],
+        ];
 
-        for (var i = 0; i < 5; i++) {
-            sout += "<br>";
-            for (var j = 0; j < 5; j++) {
-                sout += arr[i][j] + " ";
+        for (var i = 0; i < arrays.length; i++) {
+            for (var j = 0; j < arrays.length; j++) {
+                sout += arrays[i][j] + " ";
             }
+            sout += "<br>";
         }
+        document.getElementById("caroGame").innerHTML = sout;
 
-        sout += "<br><br><input type = 'button' value='Change Value' onclick='myfunction()'>";
-        b.innerHTML = sout;
 
-        function myfunction() {
-            var positionX = prompt("X: ");
-            var positionY = prompt("Y: ");
-            sout = " ";
-            arr[positionX][positionY] = "x";
-            for (var i = 0; i < 5; i++) {
-                sout += "<br/>";
-                for (var j = 0; j < 5; j++) {
-                    sout += arr[i][j] + " ";
+        //event 
+        function changeValue() {
+            sout = "";
+            var X = parseInt(prompt("Toa do X: "));
+            var Y = parseInt(prompt("Toa do Y: "));
+
+            for (var i = 0; i < arrays.length; i++) {
+                for (var j = 0; j < arrays.length; j++) {
+                    if (X === i && Y === j) {
+                        var value = parseInt(prompt("change value : "));
+                        arrays[i][j] = value;
+                        break;
+                    }
                 }
             }
-            sout += "<br/><br/><input type='button' value='Change Value' onclick='myfunction()'>"
-            b.innerHTML = "<hr/>" + sout;
+            document.getElementById("caroGame").innerHTML = sout;
+
+            for (var i = 0; i < arrays.length; i++) {
+                for (var j = 0; j < arrays.length; j++) {
+                    sout += arrays[i][j] + " ";
+                }
+                sout += "<br>";
+            }
+            document.getElementById("caroGame").innerHTML = sout;
         }
     </script>
 

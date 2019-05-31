@@ -1,27 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>RanDom</title>
 </head>
+
 <body>
     <h1>Nhap vao so nguyen xem co trung voi so randum khong</h1>
     <hr>
     <script>
         var check = true;
-        do{
-            var ramdom = parseInt(Math.random()*10);
-            var number = parseInt(prompt("Nhap number = "));
-            console.log("number = " + number);
-            console.log("So cua may = " + ramdom);
+        do {
+            var ramdom = parseInt(Math.random() * 10);
+            var number = parseInt(prompt("Nhap number: "));
+
+            console.log("number = " + number + " - So cua may = " + ramdom);
+
             if (number === ramdom) {
                 check = false;
                 console.log("thoat");
                 break;
             }
-        } while(check = true);
+        } while (check);
     </script>
 </body>
+
 </html>
