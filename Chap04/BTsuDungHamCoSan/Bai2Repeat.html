@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>bai2</title>
+    <title>cach2</title>
 </head>
 
 <body>
@@ -16,16 +16,19 @@
     <script>
         var number = parseInt(prompt("nhap number: "));
         str = number.toString();
+        var result = [];
+
+        for (var i = 0; i < str.length; i++) {
+            if ((str[i - 1] % 2 === 0) && (str[i] % 2 === 0)) {
+                result.push('-', str[i]);
+            } else {
+                result.push(str[i]);
+            }
+        }
 
         var sout = "";
-        for (var i = 0; i < str.length; i++) {
-            sout += str[i];
-            var first = parseInt(str[i]);
-            var last = parseInt(str[i + 1]);
-
-            if ((first % 2 === 0) && (last % 2 === 0)) {
-                sout += "-";
-            }
+        for (var i = 0; i < result.length; i++) {
+            sout += result[i];
         }
         document.getElementById("hienthi").innerHTML = sout;
     </script>
