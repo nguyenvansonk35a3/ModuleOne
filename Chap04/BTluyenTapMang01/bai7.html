@@ -19,20 +19,16 @@
         for (i = 0; i < 10; i++) {
             arr[i] = parseInt(prompt("nhap element: "));
         }
-        var sout = "";
-        for (i = 0; i < arr.length; i++) {
-            sout += arr[i] + " ";
-        }
-        document.getElementById("hienthi").innerHTML = sout;
+        document.getElementById("hienthi").innerHTML = arr.toString();
 
         //nhập giá trị V và kiểm tra
         var V = parseInt(prompt("add value V: "));
-        var sout2 = "", index = 0;
+        var sout2 = "",
+            index = 0;
         for (i = 0; i < arr.length; i++) {
             if (V == arr[i]) {
                 sout2 += V + " is in the array";
                 index = i;
-
             }
         }
         document.getElementById("kiemTra").innerHTML = sout2;
@@ -45,7 +41,7 @@
         }
         arr.pop();
         for (i = 0; i < arr.length; i++) {
-            sout3 += arr[i] +" ";
+            sout3 += arr[i] + " ";
         }
         document.getElementById("deleteElement").innerHTML = "Mamg moi sau khi xoa phan tu V la " + sout3;
     </script>

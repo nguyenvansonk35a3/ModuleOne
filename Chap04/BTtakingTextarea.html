@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Taking Textarea</title>
+</head>
+
+<body>
+    <h1>Ung dung vui Taking Textarea on Typing </h1>
+    <hr>
+
+    <center>
+        <h2>Type anthing showly</h2>
+        <form name="f">
+            <textarea name="txt" cols="50" rows="20" onkeydown="typeTextarea();"></textarea>
+        </form>
+        <script>
+            var arr = new Array(),
+                n = "";
+            arr[1] = 'N';
+            arr[2] = 'g';
+            arr[3] = 'u';
+            arr[4] = 'y';
+            arr[5] = 'e';
+            arr[6] = 'n';
+            arr[7] = ' ';
+            arr[8] = 'V';
+            arr[9] = 'a';
+            arr[10] = 'n';
+            arr[11] = ' ';
+            arr[12] = 'S';
+            arr[13] = 'o';
+            arr[14] = 'n';
+
+            function typeTextarea() {
+                t = document.f.txt.value;
+                j = t.length;
+                if (j > 0) {
+                    for (var i = 1; i <= j; i++) {
+                        n = n + a[i];
+                        if (i == 15) {
+                            document.f.txt.value = "";
+                            n = "";
+                        }
+                    }
+                }
+                document.f.txt.value = n;
+                n = "";
+                setTimeout("typeTextarea()", 1);
+                //return false;
+            }
+        </script>
+    </center>
+</body>
+
+</html>
