@@ -14,24 +14,28 @@
 
     <script>
         function isPrime(number) {
-            var sout = "";
-            for (i = 1; i <= number; i++) {
-                var dem = 0;
-                for (j = 1; j <= i; j++) {
-                    if (i % j == 0) {
-                        dem++;
-                    }
-                }
-                if (dem == 2) {
-                    sout += i + " ";
+            var result = 0;
+            var dem = 0;
+            for (var i = 1; i <= number; i++) {
+                if (number % i == 0) {
+                    dem++;
                 }
             }
-
-            return sout;
+            if (dem == 2) {
+                result = 1;
+            }
+            return result;
         }
 
-        var display = isPrime(1000);
-        document.write(" CÁC SỐ NGUYÊN TỐ <1000 LÀ:  " + display);
+        var number = 1000;
+        var sout = "";
+        for (var i = 1; i < 1000; i++) {
+            if (isPrime(i) == 1) {
+                sout += i + " ";
+            }
+        }
+
+        document.write("CÁC SỐ NGUYÊN TỐ < " + number + " LÀ:  " + sout);
     </script>
 </body>
 
