@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tic tac toe</title>
+</head>
+
+<body>
+    <h1>Bai tap tic tac toe</h1>
+    <hr>
+
+    <p id="carogame"></p>
+    <input type="button" value="Change Value" onclick="changeValue()">
+    <br><br>
+    <script>
+        var sout = "";
+        var boerd = [];
+        var arrays = [
+            ['.', '.', '.', '.', '.'],
+            ['.', '.', '.', '.', '.'],
+            ['.', '.', '.', '.', '.'],
+            ['.', '.', '.', '.', '.'],
+            ['.', '.', '.', '.', '.']
+        ]
+
+        sout = "<table border='3'  width='300' height='300' cellspacing='2' cellpadding='5' color:'red'> ";
+
+        for (var i = 0; i < arrays.length; i++) {
+            sout += "<tr>";
+            for (var j = 0; j < arrays.length; j++) {
+                sout += "<td>" + arrays[i][j] + "</td>";
+            }
+            sout += "</tr>";
+        }
+        sout += "</table>";
+        document.write(sout);
+        // document.getElementById("caroGame").innerHTML = sout;
+    </script>
+</body>
+
+</html>
