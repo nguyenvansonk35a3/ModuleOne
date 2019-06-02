@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Quan ly san pham</h1>
+    <input type="button" value="Home" id="">
+    <input type="button" value="Show" onclick="show()">
+    <input type="button" value="Add">
+    <hr>
+
+    <p id="display"></p>
+    <form>
+        <p>Add product</p>
+        <label>Name</label>
+        <input type="text" id="idAdd">
+        <input type="button" value="ADD" onclick="add()">
+    </form>
+    <p id="showEdit"></p>
+
+    <script>
+        var arr = [];
+        arr[0] = "Nguyen";
+        arr[1] = "Van";
+        arr[2] = "Son";
+        var sout, i;
+
+        //show
+        function show() {
+            sout = "<table border='3'  cellspacing='2' cellpadding='15' color:'red'> ";
+
+            for (i = 0; i < arr.length; i++) {
+                sout += "<tr>";
+                sout += "<td>" + i + "</td>";
+                sout += "<td>" + arr[i] + "</td>";
+                sout +=
+                    "<td><input type='button' value='Edit' onclick='btnEdit()'> <input type='button' onclick='btnDelete()'value='Delete' ></td>";
+                sout += "</tr>";
+            }
+            sout += "</table>";
+
+            document.getElementById("display").innerHTML = sout;
+        }
+
+        //add
+        function add() {
+            arr[arr.length] = document.getElementById("idAdd").value;
+            document.getElementById("idAdd").value = "";
+        }
+
+        //edit
+        function btnEdit() {
+            var soutEdit = ' Edit product: <br>';
+            soutEdit += '<form>Name<input type="text" id="inputName"><input type="button" value="ADD" onclick="btnAdd()"></form>';
+            document.getElementById("showEdit").innerHTML = soutEdit;
+        }
+    </script>
+</body>
+
+</html>
+<!-- <table border="1">
+        <thead>
+            <tr>
+                <td>STT</td>
+                <td>Name</td>
+                <td>Age</td>
+                <td>Privice</td>
+                <td>Other</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>a</td>
+                <td>a</td>
+                <td>a</td>
+                <td>
+                    <input type="button" value="Edit" name="" id="">
+                    <input type="button" value="Delete" name="" id="">
+                </td>
+            </tr>
+        </tbody>
+    </table> -->
