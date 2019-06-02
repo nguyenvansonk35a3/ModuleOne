@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Min</h1>
+    <hr>
+
+    <script>
+        var a = 3;
+        var b = 5;
+        var c = 2;
+        document.write(min(a, b, c));
+
+        function min(a, b, c) {
+            var min = a;
+            if (a > b) {
+                if (b < c) {
+                    min = b;
+                } else {
+                    min = c;
+                }
+            } else {
+                if (c < a) {
+                    min = c;
+                }
+            }
+            return min;
+        }
+    </script>
+</body>
+
+</html>
