@@ -13,8 +13,14 @@
     <hr>
 
     <script>
-        var str = "Nguyen Van Son";
-        alert(str.length);
+        var str = "Nguyen Van Son 03 06 2019";
+        var number = 1;
+        for (var i = 0; i < str.length; i++) {
+            if (str[i] === " ") {
+                number++;
+            }
+        }
+        document.write(number);
     </script>
 
 </body>

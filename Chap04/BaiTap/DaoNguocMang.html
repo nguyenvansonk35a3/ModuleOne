@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+
+        <h1>Dao Nguoc mang - Tach Mang</h1>
+        <hr>
+        <script>
+            var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+            document.write("Mang ban dau:  " + arr.join(" ") + "<br>");
+
+            document.write("Mang dao nguoc: " + reverse(arr).join(" ") + "<br>");
+
+            var arrChan = getChan(arr);
+            document.write("Mang chan: " + arrChan.join(" ") + "<br>");
+
+            var arrLe = getLe(arr);
+            document.write("Mang le: " + arrLe.toString() + "<br>");
+
+            function reverse(arr) {
+                var arrNew = [];
+                var index = 0;
+                for (var i = arr.length - 1; i >= 0; i--) {
+                    arrNew[index] = arr[i];
+                    index++;
+                }
+                return arrNew;
+            }
+
+            function getChan(arr) {
+                var arrResult = new Array();
+                var count = 0;
+                for (var i = 0; i < arr.length; i++) {
+                    if (arr[i] % 2 == 0) {
+                        arrResult[count] = arr[i];
+                        count++;
+                    }
+                }
+                return arrResult;
+            }
+
+            function getLe(arr) {
+                var arrResult = new Array();
+                var count = 0;
+                for (var i = 0; i < arr.length; i++) {
+                    if (arr[i] % 2 != 0) {
+                        arrResult[count] = arr[i];
+                        count++;
+                    }
+                }
+                return arrResult;
+            }
+        </script>
+    </div>
+
+</body>
+
+</html>
