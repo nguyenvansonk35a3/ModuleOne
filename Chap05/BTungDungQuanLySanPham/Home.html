@@ -6,45 +6,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 </head>
 
 <body>
-    <h1>Quan ly san pham</h1>
-    <input type="button" value="Home" id="">
-    <input type="button" value="Show" onclick="show()">
-    <input type="button" value="Add">
-    <hr>
+    <div class="container">
+        <center>
+            <h1>Quan ly san pham</h1>
+            <input type="button" class="btn btn-primary" value="Show" onclick="show()">
+            <input type="button" class="btn btn-info" value="Add">
+            <hr>
 
-    <p id="display"></p>
-    <form>
-        <p>Add product</p>
-        <label>Name</label>
-        <input type="text" id="idAdd">
-        <input type="button" value="ADD" onclick="add()">
-    </form>
-    <p id="showEdit"></p>
+            <p id="display"></p>
+            <form class="form-inline" role="form">
+                <div class="form-group">
+                    <p>Add product</p>
+                    <label>Name</label>
+                    <input type="text" id="idAdd" class="form-control">
+                    <input type="button" value="ADD" onclick="add()" class="btn btn-info">
+                </div>
+            </form>
+            <p id="showEdit"></p>
+        </center>
+
+    </div>
 
     <script>
-        var arr = [];
-        arr[0] = "Nguyen";
-        arr[1] = "Van";
-        arr[2] = "Son";
+        var arr = ["Nguyen Van Son","Nguyen Van B","Nguyen Van C"];
         var sout, i;
 
         //show
         function show() {
-            sout = "<table border='3'  cellspacing='2' cellpadding='15' color:'red'> ";
-
+            sout = "<table class='table table-bordered'> ";
             for (i = 0; i < arr.length; i++) {
                 sout += "<tr>";
                 sout += "<td>" + i + "</td>";
                 sout += "<td>" + arr[i] + "</td>";
                 sout +=
-                    "<td><input type='button' value='Edit' onclick='btnEdit()'> <input type='button' onclick='btnDelete()'value='Delete' ></td>";
+                    "<td>" +
+                    "<input type='button' value='Edit'   class='btn btn-success' onclick='btnEdit(" + i + ")'> " +
+                    "<input type='button' value='Delete' class='btn btn-danger'  onclick='btnDelete(" + i + ")'>" +
+                    "</td>";
                 sout += "</tr>";
             }
             sout += "</table>";
-
             document.getElementById("display").innerHTML = sout;
         }
 
@@ -52,38 +59,35 @@
         function add() {
             arr[arr.length] = document.getElementById("idAdd").value;
             document.getElementById("idAdd").value = "";
+            show();
         }
 
         //edit
-        function btnEdit() {
-            var soutEdit = ' Edit product: <br>';
-            soutEdit += '<form>Name<input type="text" id="inputName"><input type="button" value="ADD" onclick="btnAdd()"></form>';
+        function btnEdit(index) {
+            console.log(index);
+            var soutEdit = "<br> Edit product: <br>";
+            soutEdit +=
+                "<form class='form-inline' role='form'>" +
+                    "<div class='form-group'>" +
+                        "<label>Name</label>" +
+                        "<input type='text' id='idEdit' class='form-control'>" +
+                        "<input type='button' value='Edit' class='btn btn-success' onclick='edit(" + index + ")'> " +
+                    "</div>" +
+                "</form>";
             document.getElementById("showEdit").innerHTML = soutEdit;
+        }
+
+        function edit(index) {
+            arr[index] = document.getElementById("idEdit").value;
+            show();
+        }
+
+        //delete
+        function btnDelete(index) {
+            arr.splice(index, 1);
+            show();
         }
     </script>
 </body>
 
 </html>
-<!-- <table border="1">
-        <thead>
-            <tr>
-                <td>STT</td>
-                <td>Name</td>
-                <td>Age</td>
-                <td>Privice</td>
-                <td>Other</td>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>1</td>
-                <td>a</td>
-                <td>a</td>
-                <td>a</td>
-                <td>
-                    <input type="button" value="Edit" name="" id="">
-                    <input type="button" value="Delete" name="" id="">
-                </td>
-            </tr>
-        </tbody>
-    </table> -->
