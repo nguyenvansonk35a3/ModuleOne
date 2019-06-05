@@ -6,63 +6,81 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>ban co caro</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <style>
+        h1 {
+            color: red;
+            font-size: 30px;
+            font-weight: bolder;
+            font-family: 'Times New Roman', Times, serif;
+            font-variant: small-caps;
+            text-shadow: 0 0 4px greenyellow;
+        }
+    </style>
 </head>
 
 <body>
-    <h1>Thực hành tạo bàn cờ caro đơn giản</h1>
-    <hr>
+    <div class="container">
+        <center>
+            <h1>thực hành tạo bàn cờ caro đơn giản</h1>
+            <hr>
 
-    <p id="caroGame"></p>
-    <input type="button" value="Change Value" onclick="changeValue()">
+            <p id="caroGame"></p>
+            <input type="button" value="Change Value" onclick="changeValue()" class="btn btn-primary">
 
-    <script>
-        //display ban co
-        var sout = "";
-        var board = [];
+            <script>
+                //display ban co
+                var sout = "";
+                var board = [];
 
-        var arrays = [
-            [0, 0, 0, 0, 0],
-            [0, 0, 0, 0, 0],
-            [0, 0, 0, 0, 0],
-            [0, 0, 0, 0, 0],
-            [0, 0, 0, 0, 0],
-        ];
+                var arrays = [
+                    [0, 0, 0, 0, 0],
+                    [0, 0, 0, 0, 0],
+                    [0, 0, 0, 0, 0],
+                    [0, 0, 0, 0, 0],
+                    [0, 0, 0, 0, 0],
+                ];
 
-        for (var i = 0; i < arrays.length; i++) {
-            for (var j = 0; j < arrays.length; j++) {
-                sout += arrays[i][j] + " ";
-            }
-            sout += "<br>";
-        }
-        document.getElementById("caroGame").innerHTML = sout;
-
-
-        //event 
-        function changeValue() {
-            sout = "";
-            var X = parseInt(prompt("Toa do X: "));
-            var Y = parseInt(prompt("Toa do Y: "));
-
-            for (var i = 0; i < arrays.length; i++) {
-                for (var j = 0; j < arrays.length; j++) {
-                    if (X === i && Y === j) {
-                        var value = parseInt(prompt("change value : "));
-                        arrays[i][j] = value;
-                        break;
+                for (var i = 0; i < arrays.length; i++) {
+                    for (var j = 0; j < arrays.length; j++) {
+                        sout += arrays[i][j] + " ";
                     }
+                    sout += "<br>";
                 }
-            }
-            document.getElementById("caroGame").innerHTML = sout;
+                document.getElementById("caroGame").innerHTML = sout;
 
-            for (var i = 0; i < arrays.length; i++) {
-                for (var j = 0; j < arrays.length; j++) {
-                    sout += arrays[i][j] + " ";
+
+                //event 
+                function changeValue() {
+                    sout = "";
+                    var X = parseInt(prompt("Toa do X: "));
+                    var Y = parseInt(prompt("Toa do Y: "));
+
+                    for (var i = 0; i < arrays.length; i++) {
+                        for (var j = 0; j < arrays.length; j++) {
+                            if (X === i && Y === j) {
+                                var value = parseInt(prompt("change value : "));
+                                arrays[i][j] = value;
+                                break;
+                            }
+                        }
+                    }
+                    document.getElementById("caroGame").innerHTML = sout;
+
+                    for (var i = 0; i < arrays.length; i++) {
+                        for (var j = 0; j < arrays.length; j++) {
+                            sout += arrays[i][j] + " ";
+                        }
+                        sout += "<br>";
+                    }
+                    document.getElementById("caroGame").innerHTML = sout;
                 }
-                sout += "<br>";
-            }
-            document.getElementById("caroGame").innerHTML = sout;
-        }
-    </script>
+            </script>
+        </center>
+
+    </div>
 
 </body>
 

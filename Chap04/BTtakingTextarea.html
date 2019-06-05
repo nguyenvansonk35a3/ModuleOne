@@ -14,12 +14,12 @@
 
     <center>
         <h2>Type anthing showly</h2>
-        <form name="f">
-            <textarea name="txt" cols="50" rows="20" onkeydown="typeTextarea();"></textarea>
+        <form name="nameTextrae">
+            <textarea name="txt" cols="50" rows="20" onkeydown="typeTextarea()"></textarea>
         </form>
         <script>
-            var arr = new Array(),
-                n = "";
+            var arr = new Array();
+            n = "";
             arr[1] = 'N';
             arr[2] = 'g';
             arr[3] = 'u';
@@ -36,18 +36,18 @@
             arr[14] = 'n';
 
             function typeTextarea() {
-                t = document.f.txt.value;
+                t = document.nameTextrae.txt.value;
                 j = t.length;
                 if (j > 0) {
                     for (var i = 1; i <= j; i++) {
                         n = n + arr[i];
                         if (i == 15) {
-                            document.f.txt.value = "";
+                            document.nameTextrae.txt.value = "";
                             n = "";
                         }
                     }
                 }
-                document.f.txt.value = n;
+                document.nameTextrae.txt.value = n;
                 n = "";
                 setTimeout("typeTextarea()", 1);
                 //return false;

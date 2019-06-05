@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Bai4: get value cua element HTML</h1>
+    <hr>
+
+    <!-- <input type="button" name="welcome" value="welcome" id="" onclick="alert(msg.value)"> Not define-->
+    <input type="button" name="welcome" value="welcome" id="" onclick="display()">
+
+    <input type="text" value="welcome to JavaScript" name="msg" id="idmsg" />
+
+    <script>
+        function display() {
+            var sout = document.getElementById("idmsg").value;
+            alert(sout);
+        }
+    </script>
+</body>
+
+</html>

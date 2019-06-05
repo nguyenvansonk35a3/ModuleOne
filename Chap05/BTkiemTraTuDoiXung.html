@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Kiem tra tu doi xung</h1>
+    <hr>
+
+    <script>
+        var str = "sonnos";
+
+        if (isPalindrome(str)) {
+            document.write("Doi xung");
+        } else {
+            document.write(" khong doi xung");
+        }
+
+        function isPalindrome(str) {
+            var check = false;
+            var strNew = "";
+            console.log(strNew);
+
+            for (var i = str.length - 1; i >= 0; i--) {
+                strNew += str[i];
+            }
+            if (str === strNew) {
+                check = true;
+            }
+            return check;
+        }
+    </script>
+</body>
+
+</html>
