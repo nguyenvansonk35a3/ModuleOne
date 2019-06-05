@@ -9,6 +9,7 @@
 </head>
 
 <body>
+<<<<<<< HEAD:BaiTapInternet/QuanTriMang/Bai6.html
     <h1>Date</h1>
     <hr>
 
@@ -19,3 +20,33 @@
 </body>
 
 </html>
+=======
+    <h1>Kiem tra tu doi xung</h1>
+    <hr>
+
+    <script>
+        var str = "sonnos";
+
+        if (isPalindrome(str)) {
+            document.write("Doi xung");
+        } else {
+            document.write(" khong doi xung");
+        }
+
+        function isPalindrome(str) {
+            var check = false;
+            var strNew = "";
+            console.log(strNew);
+
+            for (var i = str.length - 1; i >= 0; i--) {
+                strNew += str[i];
+            }
+            if (str === strNew) {
+                check = true;
+            }
+            return check;
+        }
+    </script>
+</body>
+</html>
+>>>>>>> 3c06d202e3cf5828c00ebffb4c273906b845c745:Chap05/BTkiemTraDoiXung.html
